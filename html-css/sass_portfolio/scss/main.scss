@@ -1,5 +1,5 @@
-@import 'config';
-@import 'utilities';
+@import "config";
+@import "utilities";
 
 /*General styles*/
 * {
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   line-height: 1.6;
   background: #fff;
 }
@@ -74,7 +74,6 @@ img {
 
 // Header
 #header {
-
   // Header Home
   &-home {
     background: $bg-image no-repeat center right / cover;
@@ -103,7 +102,6 @@ img {
 
 // Home Sections
 #home {
-
   // Home Section A
   &-a {
     .specials {
@@ -201,19 +199,19 @@ img {
           }
         }
       }
-
     }
   }
 }
 
 // About Sections
+// About A
 #about {
   &-a {
     .about-info {
       display: grid;
       grid-template-areas:
-        'bioimage bio bio'
-        'aw1 aw2 aw3';
+        "bioimage bio bio"
+        "aw1 aw2 aw3";
       grid-gap: 1.2rem;
     }
 
@@ -245,6 +243,65 @@ img {
     .award-3 .fas {
       color: $main-color;
       margin: 1rem;
+    }
+  }
+  // About B
+  &-b {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        background-color: $main-color;
+      }
+    }
+  }
+  // About C
+
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
     }
   }
 }
