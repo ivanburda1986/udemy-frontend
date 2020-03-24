@@ -9,6 +9,7 @@ function Book(title, author, isbn) {
 // UI constructor
 function UI() {}
 
+
 // Add book to list
 UI.prototype.addBookToList = function (book) {
   const list = document.getElementById('book-list');
@@ -54,6 +55,7 @@ UI.prototype.deleteBook = function (target) {
 
     //Instantiate the UI
     const ui = new UI();
+
     //Show alert
     ui.showAlert('Book removed', 'success');
   }
