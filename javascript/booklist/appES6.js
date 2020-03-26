@@ -1,3 +1,4 @@
+//Book class
 class Book {
   constructor(title, author, isbn) {
     this.title = title;
@@ -5,7 +6,7 @@ class Book {
     this.isbn = isbn;
   }
 }
-
+// UI class
 class UI {
   addBookToList(book) {
     const list = document.getElementById('book-list');
