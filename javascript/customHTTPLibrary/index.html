@@ -5,11 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    integrity="sha256-ECB9bbROLGm8wOoEbHcHRxlHgzGqYpDtNTgDTyDz0wg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="stylesheet.css">
   <title>Easy HTTP Example</title>
 </head>
 
 <body>
   <h1>Easy HTTP Example</h1>
+  <h2>Results</h2>
+  <form>
+    <button class="btn" id="get-multiple-posts">Get multiple posts</button>
+    <button class="btn" id="get-a-post">Get a post</button>
+    <button class="btn" id="create-a-post">Create a post</button>
+    <button class="btn" id="update-a-post">Update a post</button>
+    <button class="btn" id="delete-a-post">Delete a post</button>
+  </form>
+  <div id="results"></div>
+
 
   <script src="easyhttp-es5.js"></script>
   <script src="app.js"></script>
