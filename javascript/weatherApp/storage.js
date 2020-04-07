@@ -1,9 +1,9 @@
 class Storage {
   constructor() {
     this.city;
-    this.state;
+    this.country;
     this.defaultCity = 'Miami';
-    this.defaultState = 'FL';
+    this.defaultCountry = 'US';
   }
 
   getLocationData() {
@@ -12,22 +12,22 @@ class Storage {
     } else {
       this.city = localStorage.getItem('city');
     }
-    if (localStorage.getItem('state') === null) {
-      this.state = this.defaultState;
+    if (localStorage.getItem('country') === null) {
+      this.country = this.defaultCountry;
     } else {
-      this.state = localStorage.getItem('state');
+      this.country = localStorage.getItem('country');
     }
 
     return {
       city: this.city,
-      state: this.state
+      country: this.country
     }
 
   }
 
-  setLocationData(city, state) {
+  setLocationData(city, country) {
     localStorage.setItem('city', city);
-    localStorage.setItem('state', state);
+    localStorage.setItem('country', country);
   }
 
 }
