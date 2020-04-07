@@ -2,7 +2,7 @@
 const storage = new Storage();
 
 //Get stored location data from the local storage
-const weatherLocation = storage.changeLocationData();
+const weatherLocation = storage.getLocationData();
 
 //Initialize the weather class object
 const weather = new Weather(weatherLocation.city, weatherLocation.state);

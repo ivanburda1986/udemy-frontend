@@ -1,17 +1,18 @@
 class Weather {
   constructor(city, state) {
-    this.apiKey = '99dfe35fcb7de1ee';
+    this.apiKey = 'dd207371978b5115bee7ce45e416fadd';
     this.city = city;
     this.state = state;
+    this.country = 'us';
   }
 
   //Fetch weather from API
   async getWeather() {
-    const response = await fetch(`http://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city}.json`);
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&units=metric&appid=${this.apiKey}`);
 
     const responseData = await response.json();
-
-    return responseData.current_observation;
+    console.log(responseData);
+    return responseData;
   }
 
   //Change the weather location
