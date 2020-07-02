@@ -1,4 +1,61 @@
 //Storage controller
+const StorageCtrl = (function () {
+  //Public methods
+  return {
+    storeItem: function (item) {
+      let items;
+      //Check if any items in local storage
+      if (localStorage.getItem("items") === null) {
+        items = [];
+        //Push the new item in
+        items.push(item);
+        //Set local storage
+        localStorage.setItem("items", JSON.stringify(items));
+      } else {
+        //Get what is already in the local storage
+        items = JSON.parse(localStorage.getItem("items"));
+
+        //Push the new item
+        items.push(item);
+
+        //Reset the local storage
+        localStorage.setItem("items", JSON.stringify(items));
+      }
+    },
+    getItemsFromStorage: function () {
+      let items;
+      if (localStorage.getItem("items") === null) {
+        items = [];
+      } else {
+        items = JSON.parse(localStorage.getItem("items"));
+      }
+      return items;
+    },
+    updateItemStorage: function (updatedItem) {
+      let items = JSON.parse(localStorage.getItem("items"));
+
+      items.forEach(function (item, index) {
+        if (updatedItem.id === item.id) {
+          items.splice(index, 1, updatedItem);
+        }
+      });
+      localStorage.setItem("items", JSON.stringify(items));
+    },
+    deleteItemFromStorage: function (id) {
+      let items = JSON.parse(localStorage.getItem("items"));
+
+      items.forEach(function (item, index) {
+        if (id === item.id) {
+          items.splice(index, 1);
+        }
+      });
+      localStorage.setItem("items", JSON.stringify(items));
+    },
+    clearItemsFromStorage: function () {
+      localStorage.removeItem("items");
+    },
+  };
+})();
 
 //Item controller
 const ItemCtrl = (function () {
@@ -11,23 +68,7 @@ const ItemCtrl = (function () {
 
   //Data structure / State
   const data = {
-    items: [
-      // {
-      //   id: 0,
-      //   name: "Steak dinner",
-      //   calories: 1200,
-      // },
-      // {
-      //   id: 1,
-      //   name: "Coookie",
-      //   calories: 400,
-      // },
-      // {
-      //   id: 2,
-      //   name: "Eggs",
-      //   calories: 300,
-      // },
-    ],
+    items: StorageCtrl.getItemsFromStorage(),
     currentItem: null,
     totalCalories: 0,
   };
@@ -247,7 +288,7 @@ const UICtrl = (function () {
 })();
 
 //App controller
-const App = (function (ItemCtrl, UICtrl) {
+const App = (function (ItemCtrl, StorageCtrl, UICtrl) {
   //Load event listeners
   const loadEventListeners = function () {
     //Use the puglic method of UICtrl to get available UI selector for further re-use in the App controller here
@@ -313,6 +354,9 @@ const App = (function (ItemCtrl, UICtrl) {
       //Add total calories to the UI
       UICtrl.showTotalCalories(totalCalories);
 
+      //Store in local storage
+      StorageCtrl.storeItem(newItem);
+
       //Clear the input fields for name and calories after a meal is added
       UICtrl.clearInput();
     }
@@ -361,6 +405,9 @@ const App = (function (ItemCtrl, UICtrl) {
     //Add total calories to the UI
     UICtrl.showTotalCalories(totalCalories);
 
+    //Update local storage
+    StorageCtrl.updateItemStorage(updatedItem);
+
     UICtrl.clearEditState();
 
     e.preventDefault();
@@ -383,6 +430,9 @@ const App = (function (ItemCtrl, UICtrl) {
     //Add total calories to the UI
     UICtrl.showTotalCalories(totalCalories);
 
+    //Delete from local storage
+    StorageCtrl.deleteItemFromStorage(currentItem.id);
+
     UICtrl.clearEditState();
 
     e.preventDefault();
@@ -401,6 +451,9 @@ const App = (function (ItemCtrl, UICtrl) {
 
     //Remove from the UI
     UICtrl.removeItems();
+
+    //Delete all items from the local storage
+    StorageCtrl.clearItemsFromStorage();
 
     //Hide the list line
     UICtrl.hideList();
@@ -435,7 +488,7 @@ const App = (function (ItemCtrl, UICtrl) {
       loadEventListeners();
     },
   };
-})(ItemCtrl, UICtrl);
+})(ItemCtrl, StorageCtrl, UICtrl);
 
 //Initialize app
 App.init();
