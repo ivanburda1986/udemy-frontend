@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "title": "Finish the Udemy JS course",
+      "body": "On udemy",
+      "id": 1
+    },
+    {
+      "title": "Visit the bike store",
+      "body": "And find out whether they have an affordable bike for me.          ",
+      "id": 2
+    },
+    {
+      "title": "Walk for a while",
+      "body": "Go for a walk to the bike store.",
+      "id": 3
+    },
+    {
+      "title": "Udemy JS course",
+      "body": "Update my review of the Brad Traversy JS course i have just finished",
+      "id": 4
+    }
+  ]
+}
