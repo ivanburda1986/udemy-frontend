@@ -175,6 +175,7 @@ p {
 /* Section: What We Do */
 #what .items {
   display: flex;
+  flex-direction: row;
   padding: 1rem;
 }
 
