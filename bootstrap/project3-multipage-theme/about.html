@@ -69,6 +69,119 @@
   </div>
 </section>
 
+<!-- Icon boxes -->
+<section id="icon-boxes" class="p-5">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card bg-danger text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-building fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-bullhorn fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-danger text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-comments fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-box fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-danger text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-credit-card fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white text-center">
+          <div class="card-body">
+            <i class="fas fa-coffee fa-3x"></i>
+            <h3>Sample heading</h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sapiente.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="p-4 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center">Testimonials</h2>
+    <div class="row text-center">
+      <div class="col">
+        <div class="slider">
+          <div>
+            <blockquote class="blockquote">
+              <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam!</p>
+              <footer class="blockquote-footer">John Doe from 
+                <cite title="Company1">Company 1</cite>
+              </footer>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote class="blockquote">
+              <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam!</p>
+              <footer class="blockquote-footer">Sam Smith from 
+                <cite title="Company2">Company 2</cite>
+              </footer>
+            </blockquote>
+          </div>
+          <div>
+            <blockquote class="blockquote">
+              <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam!</p>
+              <footer class="blockquote-footer">Megan Williams from 
+                <cite title="Company3">Company 3</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="main-footer" class="text-center p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>Copyright &copy; <span id="year">Glozzom</span></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
 <!-- SCRIPTS -->
   <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -82,6 +195,12 @@
   //Get the current year for the copyright
   $('#year').text(new Date().getFullYear());
 
+  //Init slider
+  $('.slider').slick({
+    infinite: true,
+    slideToShow: 1,
+    slideToScroll: 1
+  });
 
 
 </script>
