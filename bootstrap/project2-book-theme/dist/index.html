@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap theme</title>
 </head>
-<body>
+<body id="home" data-spy="scroll" data-target="#main-nav">
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+<nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
   <div class="container">
     <a href="#home" class="navbar-brand">
       <img src="img/mlogo.png" width="50" height="50" alt="logo">
@@ -60,6 +60,274 @@
   </div>
 </section>
 
+<!-- NEEWSLETTER -->
+<section id="newsletter" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <input type="text" class="form-control form-control-lg mb-resp" placeholder="Enter your name">
+      </div>
+      <div class="col-md-4">
+        <input type="email" class="form-control form-control-lg mb-resp" placeholder="Enter your email">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primaryCyan btn-lg btn-block mb-resp">
+          <i class="fas fa-envelope-open-o"></i>Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card text-center border-primaryCyan mb-resp">
+          <div class="card-body">
+            <h3 class="text-primaryCyan">Be Better</h3>
+            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, vero.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primaryCyan text-white mb-resp">
+          <div class="card-body">
+            <h3>Be Faster</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, vero.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center border-primaryCyan mb-resp">
+          <div class="card-body">
+            <h3 class="text-primaryCyan">Be Smarter</h3>
+            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, vero.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primaryCyan text-white mb-resp">
+          <div class="card-body">
+            <h3>Be Richer</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, vero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-5 texte-center bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primaryCyan text-center pb-3">Why this book</h1>
+          <p class="lead pb-3 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima placeat praesentium assumenda molestiae quibusdam culpa!</p>
+        </div>
+        <!-- Accordion -->
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion"> <i class="fas fa-arrow-circle-down"></i> Get inspired</div>
+              </h5>
+            </div>
+            <div id="collapse1" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid voluptates officiis consectetur quidem ad quo nulla, atque vitae voluptatibus dolores doloremque saepe harum molestias quod nostrum amet sed earum fugiat sequi velit quas. Facere ex nihil necessitatibus perspiciatis excepturi?
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion"> <i class="fas fa-arrow-circle-down"></i> Gain the knowledge</div>
+              </h5>
+            </div>
+            <div id="collapse2" class="collapse ">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid voluptates officiis consectetur quidem ad quo nulla, atque vitae voluptatibus dolores doloremque saepe harum molestias quod nostrum amet sed earum fugiat sequi velit quas. Facere ex nihil necessitatibus perspiciatis excepturi?
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse3" data-toggle="collapse" data-parent="#accordion"> <i class="fas fa-arrow-circle-down"></i>Open your mind</div>
+              </h5>
+            </div>
+            <div id="collapse3" class="collapse ">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aliquid voluptates officiis consectetur quidem ad quo nulla, atque vitae voluptatibus dolores doloremque saepe harum molestias quod nostrum amet sed earum fugiat sequi velit quas. Facere ex nihil necessitatibus perspiciatis excepturi?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORS -->
+<section id="authors" class="my-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primaryCyan pb-3">Meet the authors</h1>
+          <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias non neque quod. Voluptates, vel quod.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Suzan Williams</h3>
+            <h5 class="text-muted">Lead Writer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos provident, ex illum voluptatem sapiente.</p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4 ">
+                <a href="https://facebook.com"><i class="fab fa-facebook text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://twitter.com"><i class="fab fa-twitter text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://instagram.com"><i class="fab fa-instagram text-primaryCyan"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Grace Smith</h3>
+            <h5 class="text-muted">Co-writer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos provident, ex illum voluptatem sapiente.</p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4 ">
+                <a href="https://facebook.com"><i class="fab fa-facebook text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://twitter.com"><i class="fab fa-twitter text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://instagram.com"><i class="fab fa-instagram text-primaryCyan"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Ted Browny</h3>
+            <h5 class="text-muted">Editor</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos provident, ex illum voluptatem sapiente.</p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4 ">
+                <a href="https://facebook.com"><i class="fab fa-facebook text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://twitter.com"><i class="fab fa-twitter text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://instagram.com"><i class="fab fa-instagram text-primaryCyan"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Kevin Smith</h3>
+            <h5 class="text-muted">Designer</h5>
+            <p>Lorem ipsum dolor sit amet  consectetur amet adipisicing. Veniam provident adipisicing, ex illum adipisicing voluptatem sapiente.</p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4 ">
+                <a href="https://facebook.com"><i class="fab fa-facebook text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://twitter.com"><i class="fab fa-twitter text-primaryCyan"></i></a>
+              </div>
+              <div class="p-4">
+                <a href="https://instagram.com"><i class="fab fa-instagram text-primaryCyan"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h3>Get in touch</h3>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, natus.</p>
+        <form>
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-user"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-envelope-open"></i>
+              </span>
+            </div>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-pencil-alt"></i>
+              </span>
+            </div>
+            <textarea class="form-control" placeholder="Name" placeholder="message" row="5"></textarea>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primaryCyan btn-block">
+        </form>
+      </div>
+      <div class="col-lg-3 align-self-center">
+        <img src="img/mlogo.png" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="main-footer" class="py-5 bg-primaryCyan text-white text-center">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6 ml-auto">
+        <p class="lead d-block">
+          Copyright &copy; <span id="year"></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <!-- SCRIPTS -->
   <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -71,6 +339,28 @@
 <script>
   //Get the current year for the copyright
   $('#year').text(new Date().getFullYear());
+
+   //Init scrollspy
+   $('body').scrollspy({target: '#main-nav'});
+
+//Add smooth scrolling
+$('#main-nav a').on('click', function(e){
+//Check for a hash value
+if(this.hash !== ''){
+  //Prevent default
+  e.preventDefault();
+  //Store the hash in the variable
+  const hash = this.hash;
+  //Animate smooth scroll
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 1500, function(){
+    //Add hash to the url after the sroll
+    window.location.hash = hash;
+
+  })
+}
+})
 </script>
 
 </body>
